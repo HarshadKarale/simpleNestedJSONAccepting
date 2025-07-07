@@ -12,6 +12,9 @@ public class userController {
 	userEntity user;
 	@PostMapping("/user/register")
 	public String registerUser(@RequestBody userEntity user) {
-		return "Register User Called!"+user.getAddress();
+		System.out.println(user.getId());
+		System.out.println(user.getEmail());
+		System.out.println(user.getAddress());
+		return "Register User Called!"+user;
 	}
 }
